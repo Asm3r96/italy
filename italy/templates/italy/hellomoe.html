@@ -1,0 +1,33 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    hello Moe
+hahahahahh
+    <img src=" {% static 'images\klassy-logo.png' %} " alt="">
+
+    {% for product in products%}
+    {% if product.active %}
+        <div class="card card-cascade" >
+        <div class="card-body card-body-cascade text-center">
+            <img src="{{product.image}}" alt="Card image cap">
+            <!-- Title -->
+            <h4 class="card-title"><strong>{{product.title}}</strong></h4>
+            <!-- Subtitle -->
+            <!-- <h6 class="font-weight-bold indigo-text py-2">{{product.category}}</h6> -->
+            <!-- Text -->
+          <!-- Text -->
+            <p class="">{{product.description}} <br> </p>
+            <!-- Price -->
+            
+    {% endif %}    
+    {% endfor %}
+</body>
+</html>
